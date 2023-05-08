@@ -1,2 +1,8 @@
-const test: string = "I've initialized the project.........";
-console.log(test);
+function lottery(lotteryName: string, cash: number = 3) {
+  let i = 0;
+  for (i = 0; i < cash; i++) {
+    console.log(lotteryName);
+  }
+}
+
+lottery("Jackpot Mania", 10);
