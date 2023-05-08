@@ -12,10 +12,27 @@ class Person {
   get Age(): number {
     return this.age;
   }
-  getDetails() {
+  public getDetails(): string {
     console.log(`Here is ${this.name} with the age of ${this.age}`);
+    return `${this.name}'s age is ${this.age} `;
   }
 }
 
-const learner = new Person("Rezwan Niam", 23);
+const learner = new Person("Akash", 23);
 learner.getDetails();
+
+// Part 2
+class Student extends Person {
+  private grade: number;
+  constructor(name: string, age: number, grade: number) {
+    super(name, age);
+    this.grade = grade;
+  }
+  public getGrade(): string {
+    console.log(` ${this.getDetails()} and "GRADE": ${this.grade} `);
+    return ` ${this.getDetails()} and GRADE: ${this.grade} `;
+  }
+}
+
+const grade = new Student("Batash", 17, 3.56);
+grade.getGrade();
