@@ -46,6 +46,7 @@ let personInformations2: { name: string; age: number }[] = [
 const identifyPerson = (param: { name: string; age: number }[]) => {
   const result = param.filter((information) => information.age >= 18);
   console.log(result);
+  return result;
 };
 
 identifyPerson(personInformations1);

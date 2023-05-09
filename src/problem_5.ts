@@ -2,7 +2,9 @@ const checkAdress = (param: unknown): void => {
   if (typeof param === "string") {
     console.log(param);
   } else {
-    console.log("ERROR: WRONG INPUT");
+    console.log(
+      `ERROR: WRONG INPUT (exprected string, instead got ${typeof param})`
+    );
   }
 };
-checkAdress("Dhaka");
+checkAdress("Mirpur, Dhaka");
